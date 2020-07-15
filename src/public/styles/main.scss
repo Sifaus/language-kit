@@ -1,0 +1,266 @@
+#mainContainer {
+	width: 80%;
+	height: 100%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(13, 1fr);
+	grid-gap: 5px;
+
+	@media screen and (max-width: 1024px) {
+		width: 90%;
+	}
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
+	@media screen and (max-width: 670px) {
+	}
+	@media screen and (max-width: 440px) {
+	}
+	@media screen and (max-height: 500px) {
+	}
+
+	& > * {
+		background-color: $background-color-light;
+	}
+
+	& > .page {
+		grid-row: 2 / span 12;
+		grid-column: 3 / span 8;
+		overflow: hidden auto;
+
+		& > div {
+			& > .title {
+				background: $background-color-light;
+				font-size: 1.6em;
+				border-bottom: 1px $border-color-soft solid;
+				padding: 5px;
+				position: sticky;
+				top: 0;
+			}
+
+			& > .content {
+				padding: 0 5px;
+				margin: 10px 0 30px;
+			}
+
+			&#langWrapper {
+				& > .content {
+					display: grid;
+					grid-template-columns: repeat(12, 1fr);
+					grid-template-rows: repeat(25, auto);
+					gap: 3px;
+
+					& > label {
+						font-size: 1em;
+						grid-row: span 1;
+						grid-column: span 2;
+
+						&.main {
+							font-weight: bold;
+						}
+
+						&.wide {
+							grid-column: span 3;
+						}
+					}
+
+					& > input {
+						font-size: 0.9em;
+					}
+
+					& > hr {
+						grid-row: span 1;
+						grid-column: span 12;
+						height: 5px;
+						width: 100%;
+						border: 0;
+						-webkit-appearance: none;
+						margin: 0;
+						padding: 0;
+					}
+
+					& > input[type="text"] {
+						grid-row: span 1;
+						grid-column: span 10;
+					}
+
+					& > input[type="checkbox"] {
+						grid-row: span 1;
+						grid-column: span 1;
+					}
+
+					& > button {
+						grid-row: span 1;
+						grid-column: span 1;
+					}
+
+					& #output {
+						grid-row: span 1;
+						grid-column: span 12;
+
+						& > .word {
+							display: inline-block;
+							text-decoration: none;
+							width: auto;
+							padding: 3px;
+							margin: 3px;
+							background: $icon-background-hover-color;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	& > .wide {
+		grid-row: span 1;
+		grid-column: span 10;
+
+		@media screen and (max-width: 1024px) {
+		}
+		@media screen and (max-width: 768px) {
+		}
+		@media screen and (max-width: 670px) {
+		}
+		@media screen and (max-width: 440px) {
+		}
+		@media screen and (max-height: 500px) {
+		}
+
+		& > .title {
+			display: table;
+			width: 100%;
+			height: 100%;
+
+			& > h1 {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	& > .big {
+		grid-row: span 1;
+		grid-column: span 2;
+
+		& > .title {
+			display: table;
+			width: 100%;
+			height: 100%;
+
+			& > a {
+				font-size: 1.6em;
+
+				@media screen and (max-width: 1024px) {
+					font-size: 1.45em;
+				}
+				@media screen and (max-width: 768px) {
+					font-size: 1.3em;
+				}
+				@media screen and (max-width: 670px) {
+					font-size: 0.7em;
+				}
+				@media screen and (max-width: 440px) {
+				}
+				@media screen and (max-height: 500px) {
+					font-size: 0.6em;
+				}
+			}
+		}
+	}
+
+	& > .small {
+		grid-row: span 1;
+		grid-column: span 1;
+
+		& > .title {
+			display: table;
+			width: 100%;
+			height: 100%;
+
+			& > a {
+				font-size: 1.4em;
+
+				@media screen and (max-width: 1024px) {
+					font-size: 1.25em;
+				}
+				@media screen and (max-width: 768px) {
+					font-size: 1.1em;
+				}
+				@media screen and (max-width: 670px) {
+					font-size: 0.7em;
+				}
+				@media screen and (max-width: 440px) {
+				}
+				@media screen and (max-height: 500px) {
+					font-size: 0.6em;
+				}
+			}
+		}
+	}
+}
+
+.user-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: $transparent-darken;
+
+	& > .user-wrapper {
+		width: 360px;
+		height: auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin: 0;
+		background: $background-color-light;
+		padding: 5px;
+
+		& > .inner-wrapper {
+			display: grid;
+			grid-gap: 5px;
+
+			&.logo {
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+				grid-template-rows: 1fr 20px;
+			}
+			&.sign {
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: 1fr 20px 20px 20px 20px 20px;
+			}
+			&.logi {
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: 1fr 20px 20px 20px;
+			}
+
+			& > h3 {
+				grid-row: span 1;
+				grid-column: span 4;
+				text-align: center;
+				background: $background-color-light;
+				font-size: 1.6em;
+				border-bottom: 1px $border-color-soft solid;
+			}
+
+			& > label {
+				grid-row: span 1;
+				grid-column: span 1;
+			}
+
+			& > input {
+				grid-row: span 1;
+				grid-column: span 3;
+			}
+
+			& > button {
+				grid-row: span 1;
+				grid-column: 2 / span 2;
+			}
+		}
+	}
+}

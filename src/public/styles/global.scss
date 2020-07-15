@@ -1,0 +1,242 @@
+* {
+	cursor: default;
+	box-sizing: border-box;
+	z-index: 100;
+	font-family: Hack-Font;
+	scrollbar-width: thin;
+	scrollbar-color: $scrollbar-foreground-color $scrollbar-background-color;
+}
+
+@font-face {
+	font-family: Hack-Font;
+	src: url($directory-font + "Hack.ttf");
+}
+
+html,
+body {
+	background: $background-color;
+	color: $text-color;
+	font-size: 0.9em;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background: $scrollbar-background-color;
+	border-radius: 0;
+	margin: 0;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $scrollbar-foreground-color;
+	border-radius: 0;
+}
+
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+a {
+	text-decoration: none;
+	color: $text-color;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+
+	&:hover {
+		color: $text-color;
+		background-color: $icon-background-hover-color;
+		transition: all 0.1s ease-in-out;
+	}
+
+	&:active {
+		color: $text-color;
+		background-color: $icon-background-active-color;
+	}
+
+	&:focus {
+		color: $text-color;
+		background-color: $icon-background-focus-color;
+	}
+
+	&:visited {
+		color: $text-color;
+		background-color: unset;
+	}
+}
+
+label {
+	display: inline-block;
+	text-align: right;
+	font-size: 1.2em;
+}
+
+h1 {
+	font-size: 4em;
+	padding: 12px;
+	margin: 0;
+
+	@media screen and (max-width: 1024px) {
+		font-size: 3.6em;
+	}
+	@media screen and (max-width: 768px) {
+		font-size: 3.2em;
+	}
+	@media screen and (max-width: 670px) {
+		font-size: 2.8em;
+	}
+	@media screen and (max-width: 440px) {
+		font-size: 2.4em;
+	}
+	@media screen and (max-height: 500px) {
+		font-size: 2.4em;
+	}
+}
+
+h2 {
+	font-size: 2em;
+	padding: 6px;
+	margin: 0;
+
+	@media screen and (max-width: 1024px) {
+		font-size: 1.9em;
+	}
+	@media screen and (max-width: 768px) {
+		font-size: 1.8em;
+	}
+	@media screen and (max-width: 670px) {
+	}
+	@media screen and (max-width: 440px) {
+	}
+	@media screen and (max-height: 500px) {
+	}
+}
+
+h3 {
+	font-size: 1.2em;
+	padding: 3px;
+	margin: 0;
+
+	@media screen and (max-width: 1024px) {
+		font-size: 1.1em;
+	}
+	@media screen and (max-width: 768px) {
+		font-size: 1em;
+	}
+	@media screen and (max-width: 670px) {
+	}
+	@media screen and (max-width: 440px) {
+	}
+	@media screen and (max-height: 500px) {
+	}
+}
+
+p {
+	margin: 0 0 10px;
+	text-align: justify;
+	text-justify: auto;
+	text-indent: 6px;
+}
+
+button {
+	height: 100%;
+	width: 100%;
+	background: $icon-background-color;
+	color: $text-color;
+	border: 1px $icon-background-hover-color solid;
+
+	&:hover {
+		border: 1px $border-color solid;
+		background: $icon-background-hover-color;
+		transition: all 300ms ease;
+	}
+
+	&:active {
+		border: 1px $border-color solid;
+		background: $icon-background-active-color;
+		transition: all 300ms ease;
+	}
+
+	&:focus {
+		border: 1px $border-color solid;
+		background: $icon-background-focus-color;
+		transition: all 300ms ease;
+	}
+}
+
+input {
+	height: 100%;
+	width: 100%;
+	background: $icon-background-color;
+	color: $text-color;
+	border: 1px $icon-background-hover-color solid;
+	appearance: none;
+	-webkit-appearance: none;
+
+	&[type="text"],
+	&[type="email"],
+	&[type="password"] {
+		&:hover {
+			border: 1px $border-color solid;
+			background: $icon-background-hover-color;
+			transition: all 300ms ease;
+		}
+
+		&:active {
+			border: 1px $border-color solid;
+			background: $icon-background-active-color;
+			transition: all 300ms ease;
+		}
+
+		&:focus {
+			border: 1px $border-color solid;
+			background: $icon-background-focus-color;
+			transition: all 300ms ease;
+		}
+	}
+
+	&:required {
+		border: 1px $border-color-error dashed;
+	}
+
+	&[type="checkbox"] {
+		appearance: none;
+		-webkit-appearance: none;
+		width: 12px;
+		height: 12px;
+		margin: 2px 0 0 0;
+
+		&:checked {
+			background: #dddddd;
+		}
+	}
+}
+
+::selection {
+    background: $background-color-darker;
+    color: $text-color;
+}
+
+.disabled,
+.removed {
+	display: none !important;
+}
+
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 300ms, opacity 300ms ease;
+}
+
+.visible {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 300ms ease;
+}

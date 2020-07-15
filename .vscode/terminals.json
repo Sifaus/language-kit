@@ -1,0 +1,13 @@
+{
+  "autorun": true,
+  "autokill": true,
+  "terminals": [
+    {
+      "name": "Server"
+    },
+    {
+      "name": "Database",
+      "shellPath": "C:\\Windows\\System32\\cmd.exe"
+    }
+  ]
+}

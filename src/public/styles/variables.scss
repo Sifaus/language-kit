@@ -1,0 +1,48 @@
+// Background
+$background-color-hell: #000000 !default;
+$background-color-darkest: #111111 !default;
+$background-color-darker: #1d1d1d !default;
+$background-color-dark: #222222 !default;
+$background-color: #2d2d2d !default;
+$background-color-light: #333333 !default;
+$background-color-lighter: #444444 !default;
+$background-color-lightest: #4d4d4d !default;
+$background-color-heaven: #555555 !default;
+$background-color-empyrean: #666666 !default;
+
+// Background - Special
+$background-color-error: #883333 !default;
+$background-color-warning: #888833 !default;
+
+// Background - Events
+$icon-background-color: $background-color-lighter;
+$icon-background-hover-color: $background-color-lightest;
+$icon-background-focus-color: $background-color-heaven;
+$icon-background-active-color: $background-color-empyrean;
+
+// Scrollbar
+$scrollbar-background-color: $background-color-heaven;
+$scrollbar-foreground-color: #aaaaaa;
+
+// Text Color
+$text-color: #cccccc !default;
+$text-color-muted: $background-color-heaven !default;
+$text-color-error: $background-color-error !default;
+$text-color-warning: $background-color-warning !default;
+
+// Border
+$border-color-hard: $background-color-darkest !default;
+$border-color: $background-color !default;
+$border-color-soft: $background-color-lightest !default;
+
+// Border - Special
+$border-color-error: $background-color-error !default;
+$border-color-warning: $background-color-warning !default;
+
+// Misc
+$transparent-darken: rgba(0, 0, 0, 0.7) !default;
+
+// Directories
+$directory-public: "../";
+$directory-font: ($directory-public + "fonts/");
+$directory-images: ($directory-public + "images/");

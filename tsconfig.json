@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"sourceMap": false,
+		"lib": [
+			"ES6",
+			"DOM"
+		],
+		"types": [
+			"node"
+		],
+		"typeRoots": [
+			"./node_modules/@types"
+		],
+		"baseUrl": "./",
+		"outDir": "./dist",
+		"strict": true,
+		"alwaysStrict": true,
+		"removeComments": false,
+		"noEmitOnError": true
+	},
+	"include": [
+		"**/*.ts",
+		"**/*.tsx",
+		"src/app.ts",
+		"src/routers/langkit.ts",
+	],
+	"exclude": [
+		"node_modules"
+	]
+}
