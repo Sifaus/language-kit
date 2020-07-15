@@ -5,13 +5,13 @@
 	"author": "Yiğit Levent",
 	"license": "MIT",
 	"type": "commonjs",
-	"homepage": "https://github.com/Sifaus/language-kit#readme",
+	"homepage": "https://github.com/yigitlevent/language-kit#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Sifaus/language-kit.git"
+		"url": "git+https://github.com/yigitlevent/language-kit.git"
 	},
 	"bugs": {
-		"url": "https://github.com/Sifaus/language-kit/issues"
+		"url": "https://github.com/yigitlevent/language-kit/issues"
 	},
 	"private": true,
 	"scripts": {
